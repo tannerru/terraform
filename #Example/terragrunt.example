@@ -1,0 +1,6 @@
+#Used to add proxmox connection information to each enviroment
+inputs = {
+  proxmox_api_url = "" 
+  proxmox_api_token_id = "" 
+  proxmox_api_token_secret = ""
+}

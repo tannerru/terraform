@@ -1,0 +1,24 @@
+#pulls ubuntu module
+terraform {
+  source = "../../../modules/ubuntu_2204"
+}
+
+#Automatically finds "terraform.hcl" with proxmox connection information in parent directory and links it
+include {
+  path = find_in_parent_folders()
+}
+
+#VM creation template, add m2, m3, etc as you need.
+inputs = {
+  k3s_masters = {
+    m1 = { target_node = "nerd-pve01", vcpu = "4", memory = "16384", disk_size = "100G", name = "HERMES-01", ip = "10.0.40.23", gw = "10.0.40.1" , ip2 = "10.0.50.23"}
+}
+
+#Inputs for variables declared in "variables.tf"
+  ssh_password = "ssh_password"
+  ssh_user = "ssh_user"
+  ciuser = "ubuntu_user"
+  cipassword = "ubuntu_password"
+  ssh_pub_key = "ssh_key"
+  k3s_source_template = "ubuntu22-04-template"
+}
