@@ -4,3 +4,6 @@
 terraform.tfstate
 terraform.tfstate.backup
 *.decrypted~*
+.terragrunt
+.terragrunt-cache
+.terragrunt.locl.hcl
