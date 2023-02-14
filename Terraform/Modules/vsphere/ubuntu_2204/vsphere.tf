@@ -30,18 +30,3 @@ resource "proxmox_vm_qemu" "k3s_master" {
   sshkeys   = var.ssh_pub_key
   ciuser = var.ciuser
   cipassword = var.cipassword
-  
-
-  # Post creation actions
-  #provisioner "remote-exec" {
-    #inline = concat(var.extend_root_disk_script)
-   # connection {
-    #  type        = "ssh"
-     # user        = var.ssh_user
-      #password    = var.ssh_password
-      #private_key = file("~/.ssh/id_rsa")
-      #host        = each.value.ip
-    #}
-  #}
-}
-
