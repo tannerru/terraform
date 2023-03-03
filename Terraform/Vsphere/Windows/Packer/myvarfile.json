@@ -1,0 +1,10 @@
+{   
+    "vcenter_server": "10.0.0.200",
+    "vcenter_user": "administrator@nerd.local",
+    "vcenter_password": "March1492!!",
+    "vcenter_datacenter": "nerdcenter",
+    "vcenter_datastore": "datastore1",
+    "esx_host": "10.0.0.212",
+    "esx_user": "root",
+    "esx_password": "March1492!!"
+}
