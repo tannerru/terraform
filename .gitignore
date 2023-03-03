@@ -7,3 +7,4 @@ terraform.tfstate.backup
 .terragrunt
 .terragrunt-cache
 .terragrunt.locl.hcl
+terraform.json
